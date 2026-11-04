@@ -1,6 +1,9 @@
 package com.devspring.identity_service.dto.response;
 
 import java.time.LocalDate;
+import java.util.Set;
+
+import com.devspring.identity_service.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -14,11 +17,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserResponse {
+public class UserResponse implements UserRepository {
     String id;
     String username;
     String firstName;
     String lastName;
-    String password;
     LocalDate dob;
+    Set<String> roles;
 }
