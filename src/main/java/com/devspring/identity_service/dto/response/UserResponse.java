@@ -17,7 +17,8 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserResponse implements UserRepository {
+public class UserResponse {
+
     String id;
     String username;
     String firstName;
